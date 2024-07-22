@@ -9,7 +9,7 @@ Presumably you have already completed this step before arriving here, however th
 
 ### Step 2 - Edit the Demo Project
 1. Login to your Automation Controller as the `admin` user and click on **Project** in the left hand sidebar.
-2. Click on the **Demo Project** and edit it. Change the **Source Control URL** to `https://github.com/RedHatGov/ansible-tower-samples` and save the project.
+2. Click on the **Demo Project** and edit it. Change the **Source Control URL** to `https://github.com/Ethewolfe/ansible-tower-samples` and save the project.
 3. Make sure the project sync completes.
 
 ### Step 3 - Create the Controller Credential
