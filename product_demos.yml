@@ -57,6 +57,8 @@
 #                - openshift
 #               - satellite
         extra_vars:
+          controller_configuration_job_templates_loop_delay: yes
+          controller_configuration_loop_delay: 5
           operation_translate:
             present:
               verb: "Create/Update"
