@@ -70,50 +70,50 @@
               verb: "Already Exists"
               action: "exists"
 
-#      - name: "Multi-SETUP demos"
-#        project: "Ansible official demo project"
-#        playbook: "multi_select_setup.yml"
-#        inventory: "Demo Inventory"
-#        credentials: "Controller Credential"
-#        survey_enabled: true
-#        survey:
-#          name: ''
-#          description: ''
-#          spec:
-#            - question_name: "Which demos do you want to configure?"
-#              type: multiselect
-#             variable: demos
-#              required: true
-#              default: "cloud\nlinux\nnetwork\nopenshift\nwindows"
-#              choices:
+      - name: "Multi-SETUP demos"
+        project: "Ansible official demo project"
+        playbook: "multi_select_setup.yml"
+        inventory: "Demo Inventory"
+        credentials: "Controller Credential"
+        survey_enabled: true
+        survey:
+          name: ''
+          description: ''
+          spec:
+            - question_name: "Which demos do you want to configure?"
+              type: multiselect
+             variable: demos
+              required: true
+              default: "cloud\nlinux\nnetwork\nopenshift\nwindows"
+              choices:
 #                - cloud
-#                - linux
+                - linux
 #                - network
 #                - openshift
 #                - satellite
 #                - windows
-#        extra_vars:
-#          operation_translate:
-#            present:
-#              verb: "Create/Update"
-#              action: "creation"
-#            absent:
-#              verb: "Remove"
-#              action: "deletion"
-#            exists:
-#              verb: "Already Exists"
-#              action: "exists"
+        extra_vars:
+          operation_translate:
+            present:
+              verb: "Create/Update"
+              action: "creation"
+            absent:
+              verb: "Remove"
+              action: "deletion"
+            exists:
+              verb: "Already Exists"
+              action: "exists"
 
   user_message:
     - Run the SETUP job template and select a use case
     - Find more documentation at https://github.com/ansible/product-demos/
 
-  tasks:
-   - name: Setup Components
-     include_role:
-     name: infra.controller_configuration.dispatch
+tasks:
+- name: Setup Components
+  include_role:
+    name: infra.controller_configuration.dispatch
 
-  - name: Print Message
-    debug:
-      msg: "{{ user_message }}"
-    when: user_message is defined
+- name: Print Message
+  debug:
+    msg: "{{ user_message }}"
+  when: user_message is defined
