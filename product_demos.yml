@@ -29,7 +29,7 @@
       - name: Ansible official demo project
         organization: Default
         scm_type: git
-        scm_url: "{{ product_demos_url | default('https://github.com/EthewolfeRH/product-demos') }}"
+        scm_url: "{{ product_demos_url | default('https://github.com/Ansible/product-demos') }}"
         scm_branch: "{{ product_demos_branch | default('main') }}"
         wait: true
     controller_templates:
